@@ -1,0 +1,15 @@
+void mx_sort_arr_int(int *arr, int size);
+
+void mx_sort_arr_int(int *arr, int size){
+    int temp;
+    for(int i = 0; i < size - 1; i++){
+        for(int j = 0; j < size - 1; j++){
+            if(arr[i + 1] < arr[j]){
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
